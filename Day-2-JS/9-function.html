@@ -1,0 +1,28 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function hello() {
+            document.write("Hello from function" + "<br/>")
+        }
+        hello();
+
+        function acceptingArgument(v) {
+            document.write(v)
+        }
+        acceptingArgument("welcome!" + "<br/>")
+        acceptingArgument("javascript" + "<br/>")
+        acceptingArgument(123 + "<br/>")
+
+        function acceptingArgumentAndReturningValue(v) {
+            document.write("accept Argument And Returning Value" + "<br/>")
+            return v
+        }
+        var result = acceptingArgumentAndReturningValue(10)
+        document.write(result)
+    </script>
+</body>
+
+</html>

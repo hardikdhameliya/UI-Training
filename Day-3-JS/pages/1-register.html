@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div class="container" >
+    <h1> Login Screen </h1>
+    <form method="post" onsubmit="return printOutput()">
+        <input type="text" name="Username" placeholder="username" id="userid" onblur="validateUser()">
+        <span class="Error" id="userErrorId" style="color: red;"></span><br />
+        <input type="password" name="Password" placeholder="password" id="passid" onblur="validatePasswd()">
+        <span class="Error" id="passwdErrorId" style="color: red;""></span><br />
+        <input type="password" name="PasswordConfirm" placeholder="confirm password" id="passConfirmid" onblur="validateConfirmPasswd()">
+        <span class="Error" id="passwdConfirmErrorId" style="color: red;""></span><br />
+        
+        Male    <input type="radio" name="Gender" value="male" onchange="validateGender()">
+        Female  <input type="radio" name="Gender" value="female" onchange="validateGender()"> 
+        <span class="Error" id="radioErrorId" style="color: red;""></span><br />
+        
+        <select name="Departments" id="departmentId" onchange="validateDepartment()" >
+                <option>SELECT</option>
+                <option >HR </option>
+                <option >Accounts</option>
+        </select>
+        <span class="Error" id="selectErrorId" style="color: red;""></span><br />
+        
+        Accept Terms and Condition <input type="checkbox" id="checkBoxId"  onchange="validateCheckBox()" >
+        <span class="Error" id="checkBoxErrorId" style="color: red;""></span><br />
+        
+      <input type = "submit" id="submitId" disabled="true">
+    </form>
+        <script src="../scripts/validate.js"> 
+        </script>
+    </div>
+    <div id="outputId">
+    </div>
+</body>
+
+</html>

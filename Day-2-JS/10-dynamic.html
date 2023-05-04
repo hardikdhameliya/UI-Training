@@ -1,0 +1,24 @@
+<html>
+
+<head></head>
+
+<body>
+    <p id="myid">
+        This is para
+    </p>
+    <input type="text" id="usernameid" value="hardik" onkeypress="mychange()">
+    <script>
+        function mychange() {
+            var username = document.getElementById("usernameid").value;
+            // document.write("<br/>" + username)
+            var pElement = document.getElementById("myid");
+            pElement.style.color = "red"
+            pElement.innerHTML = username
+        }
+
+
+    </script>
+
+</body>
+
+</html>

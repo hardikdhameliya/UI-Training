@@ -1,0 +1,23 @@
+<html>
+
+<head></head>
+
+<body>
+    <h1> Login Screen </h1>
+    <form method="post">
+        <input type="text" name="Username" placeholder="username" id="userid" onblur="checkevent('userid')">
+        <span class="Error" id="userErrorId" style="color: red;"></span><br />
+        <input type="password" name="Password" placeholder="password" id="passid" onblur="checkevent('passid')">
+        <span class="Error" id="errorId" style="color: red;""></span><br />
+    </form>
+    
+            <script>
+                function checkevent(v) {
+                    var element = document.getElementById(v).value;
+                    if (element == "" || element == null) {
+                        document.getElementById(" userErrorId").innerHTML = "Can not be blank"
+                    }
+                } </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+h1,
+span,
+.myclass {
+    text-decoration: underline;
+}
+
+.Error {
+    color: red;
+}
+
+div {
+    text-align: center;
+}
+
+a:hover {
+    color: orange;
+}
+
+thead tr {
+    background-color: brown;
+}
+
+tbody tr:hover {
+    color: blueviolet;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    padding-left: 10px;
+    background-color: chartreuse;
+}
+
+nav li {
+    display: inline;
+}

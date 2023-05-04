@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+    <body>
+
+    </body>
+    <script>
+        function demoVar(){
+            if(true){
+                var x= 10
+                console.log(x)
+                var x = 100 // redeclaration of variable is allowed using var keyword. 
+            }
+            // accessible because variable declared with var have function scope. Hence, it is accessible outside the block.
+            console.log(x)
+        }
+        demoVar()
+        function demoLet(){
+            if(true){
+                let x= 10
+                console.log(x)
+                //let x=100 // redeclaration of variable is not allowed using let keyword.
+            }
+            // caught ReferenceError: x is not defined
+            // error, variables defined with let keyowrd have block scope, so they are not accessible after block scope.
+            // console.log(x)
+        }
+        demoLet()
+        function demoConst(){
+            if(true){
+                const x= 10
+                console.log(x)
+               //  x=100  TypeError: Assignment to constant variable
+                
+            }
+            console.log(x)
+        }
+        demoConst()
+    </script>
+</html>

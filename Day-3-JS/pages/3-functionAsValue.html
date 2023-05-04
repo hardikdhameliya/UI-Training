@@ -1,0 +1,51 @@
+<html>
+    <head></head>
+    <body>
+
+    </body>
+    <script>
+        function test(){
+            console.log("Test function")
+            return 10
+        }
+       // test()
+
+        let ref = test()
+        console.log(ref)
+
+        let t = test // here we are assigning function as value to another variable.
+        t()
+
+        let i=10
+
+        let fn=function demo (){ 
+            console.log("Inside demo function")
+        }
+        fn()
+        // Following syntax shows anonymous function.
+        let d=function (){ 
+            console.log("Inside d function")
+        }
+        d()
+
+        // Arrow function ( added in ES6)
+        let ar = () => {
+            console.log("inside ar()")
+        }
+        ar()
+
+        let result = (a,b) => a+b // If there is only one statement in the arrow function, then you can omit {}
+
+        console.log(result(1,2))
+
+        let l = s => s.length // No need to () if arrow function accepts only one argument
+        console.log(l("walmart"))
+
+        const c = s => s.length // No need to () if arrow function accepts only one argument
+        console.log(l("walmart"))
+
+        let a = () => console.log("inside a()")
+        a()
+
+    </script>
+</html>   
