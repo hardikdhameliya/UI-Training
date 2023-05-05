@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function sort(fn){
+                //console.log("sorting with default algorithm")
+                fn()
+            }
+            //sort()
+            function heapSort(){
+                console.log("sorting with heap sorting algorithm")
+            }
+            // passing function as an agrument to another function
+            sort(heapSort)
+            sort(function(){
+                console.log("sorting with quick sorting algorithm")
+            })
+
+            // Arrow function
+            sort(()=>console.log("sorting with quick bubble algorithm"))
+        </script>
+    </body>
+</html>

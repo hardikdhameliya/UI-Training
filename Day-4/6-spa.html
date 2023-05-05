@@ -1,0 +1,81 @@
+<html>
+    <head></head>
+    <body>
+        <input type="button" value="createTable" onclick="createTable()">
+        <div id="update" style="visibility: hidden;">
+            Update table
+        </div>
+        <script>
+            function createTable(){
+                const tbl = document.createElement("table")
+                tbl.setAttribute("id","myTable")
+                tbl.setAttribute("border","1")
+                
+                //Table head
+                const tblHead = document.createElement("thead")
+                
+                // Head Row
+                const headRow = document.createElement("tr")
+                const thID = document.createElement("th")
+                const idText = document.createTextNode("ID")
+                const thName = document.createElement("th")
+                const nameText = document.createTextNode("Name")
+                
+                // Data row 1
+                const row1 = document.createElement("tr")
+                const tdID1 = document.createElement("td")
+                const tdIDText1 = document.createTextNode("1")
+                const tdName1 = document.createElement("td")
+                const tdNameText1 = document.createTextNode("Hardik")
+                // delete button
+                const tddelete1 = document.createElement("td")
+                const deleteButton1 = document.createElement("button")
+                const tddeleteText1 = document.createTextNode("Delete")
+                deleteButton1.setAttribute("type","button")
+                deleteButton1.setAttribute("value","delete")
+                deleteButton1.setAttribute("onclick","deleteRow()")
+                
+                const tdUpdate1 = document.createElement("td")
+                const updateButton1 = document.createElement("button")
+                const updateText1 = document.createTextNode("Update")
+                updateButton1.setAttribute("onclick","updateRow()")
+                
+                tbl.appendChild(tblHead)
+                tblHead.appendChild(headRow)
+                tbl.appendChild(row1)
+
+                // Head row
+                headRow.appendChild(thID)
+                headRow.appendChild(thName)
+                thID.appendChild(idText)
+                thName.appendChild(nameText)
+                
+                // Data row 1
+                row1.appendChild(tdID1)
+                row1.appendChild(tdName1)
+                row1.appendChild(tddelete1)
+                row1.appendChild(tdUpdate1)
+                tdID1.appendChild(tdIDText1)
+                tdName1.appendChild(tdNameText1)
+                tddelete1.appendChild(deleteButton1)
+                deleteButton1.appendChild(tddeleteText1)
+                tdUpdate1.appendChild(updateButton1)
+                updateButton1.appendChild(updateText1)
+                
+
+
+                document.body.appendChild(tbl)
+
+            }
+
+            function deleteRow(){
+                console.log("Delete row")
+            }
+
+            function updateRow(){
+                console.log("Update row")
+            }
+        </script>
+    </body>
+    
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+           function outer(){
+                let name = "walmart"
+                function inner(){
+                    console.log("Inside inner fn "+name)
+                }
+                //inner()
+                console.log("inside outer fn")
+                return inner 
+           }
+           let fn = outer()
+           fn() 
+        </script>
+    </body>
+    
+</html>
